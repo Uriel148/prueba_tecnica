@@ -25,14 +25,22 @@ df_usuarios.index += 1
 print(df_usuarios)
 
 #Agregar usuario
-nuevo_usuario = {"name": "Alejandro Aguilar", "email": "ale.agui@example.com", "role": "Usuario" }
+nuevo_nombre = "Alejandro Aguilar"
+nuevo_email = "ale.agui@example.com"
+nuevo_rol = "Usuario"
+nuevo_usuario = {"name": nuevo_nombre, "email": nuevo_email, "role": nuevo_rol }
 df_usuarios.loc[len(df_usuarios)+1] = nuevo_usuario
-#df_usuarios = df_usuarios.reset_index(drop=True)
+print(df_usuarios)
+
+#Editar Usuario
+fila_editar = 3
+editar_nombre = "Miguel Aguilar"
+editar_email = "migue.agui@example.com"
+editar_rol = "Usuario"
+df_usuarios.loc[fila_editar] = [editar_nombre,editar_email,editar_rol]
 print(df_usuarios)
 
 
-
-#Editar Usuario
 
 
 app = FastAPI()
